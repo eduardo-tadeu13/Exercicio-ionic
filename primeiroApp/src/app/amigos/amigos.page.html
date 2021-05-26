@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Amigos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list id="amigos-list">
+    <ion-list-header>
+      <ion-label>Nome</ion-label>
+      <ion-label>Amizade</ion-label>
+      <ion-label>Nível de amizade</ion-label>
+      <ion-label>Ícone</ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let label of amigos" lines="none">
+      <ion-label>{{ label.nome }}</ion-label>
+      <ion-label>{{ label.idade }}</ion-label>
+      <ion-label>{{ label.niveldeAmizade }}</ion-label>
+      <ion-label><ion-button (click)="presentActionSheet(label)"><ion-icon name="navigate"></ion-icon></ion-button></ion-label>
+
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
